@@ -252,3 +252,192 @@
             <div class="empty-state">
               <span>✦</span>
               <p>
+O registro estruturado aparecerá aqui.
+              </p>
+            </div>
+
+          </div>
+
+          <button
+            id="saveAnamnesis"
+            class="primary-btn full hidden"
+            onclick="saveAnamnesis()"
+          >
+            Salvar no prontuário
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EVOLUÇÃO -->
+
+    <section id="evolution" class="page">
+
+      <header class="topbar">
+
+        <div>
+          <p class="eyebrow">SESSÃO</p>
+          <h1>Evolução do paciente</h1>
+          <p class="muted">
+            Registre a evolução de cada atendimento.
+          </p>
+        </div>
+
+      </header>
+
+
+      <div class="card evolution-card">
+
+        <label>Paciente</label>
+
+        <select id="evolutionPatient">
+          <option value="">Selecione o paciente</option>
+        </select>
+
+
+        <label>Relato da sessão</label>
+
+        <div class="voice-box">
+
+          <textarea
+            id="evolutionText"
+            placeholder="Ex.: paciente apresentou melhora da dor após exercícios..."
+          ></textarea>
+
+          <button
+            class="voice-btn"
+            onclick="startEvolutionVoice()"
+          >
+            🎙️
+          </button>
+
+        </div>
+
+
+        <label>Conduta realizada</label>
+
+        <textarea
+          id="conduct"
+          placeholder="Descreva exercícios, técnicas, orientações..."
+        ></textarea>
+
+
+        <button
+          class="ai-button"
+          onclick="generateEvolution()"
+        >
+          ✦ Gerar evolução estruturada
+        </button>
+
+
+        <div id="evolutionResult" class="evolution-result hidden"></div>
+
+
+        <button
+          id="saveEvolution"
+          class="primary-btn full hidden"
+          onclick="saveEvolution()"
+        >
+          Salvar evolução
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- MODAL PACIENTE -->
+
+  <div id="patientModal" class="modal">
+
+    <div class="modal-content">
+
+      <button class="close" onclick="closePatientModal()">×</button>
+
+      <h2>Novo paciente</h2>
+      <p class="muted">Cadastre as informações básicas.</p>
+
+      <label>Nome completo</label>
+      <input id="newPatientName" placeholder="Nome do paciente">
+
+      <label>Data de nascimento</label>
+      <input id="newPatientBirth" type="date">
+
+      <label>Telefone</label>
+      <input id="newPatientPhone" placeholder="Telefone">
+
+      <label>Queixa principal</label>
+      <textarea
+        id="newPatientComplaint"
+        placeholder="Queixa principal..."
+      ></textarea>
+
+      <button class="primary-btn full" onclick="createPatient()">
+        Cadastrar paciente
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+style.css
+:root {
+  --primary: #087f7b;
+  --primary-dark: #05625f;
+  --background: #f5f8f8;
+  --card: #ffffff;
+  --text: #172525;
+  --muted: #708080;
+  --border: #e2eaea;
+  --purple: #7257d9;
+  --green: #20a878;
+  --blue: #3578e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid var(--border);
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
