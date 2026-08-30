@@ -441,3 +441,281 @@ button {
   padding: 28px 18px;
   display: flex;
   flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 10px 35px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.logo strong {
+  display: block;
+  font-size: 18px;
+}
+
+.logo span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-btn {
+  border: 0;
+  background: transparent;
+  color: #607070;
+  padding: 13px 15px;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: #e9f5f4;
+  color: var(--primary);
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.user {
+  border-top: 1px solid var(--border);
+  padding: 20px 8px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user strong {
+  display: block;
+  font-size: 13px;
+}
+
+.user span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  background: #dcefed;
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 42px;
+  min-height: 100vh;
+}
+
+.page {
+  display: none;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.page.active {
+  display: block;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 6px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 31px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 7px;
+}
+
+.primary-btn {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+}
+
+.text-btn {
+  border: 0;
+  background: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.full {
+  width: 100%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 13px;
+  display: block;
+}
+
+.stat-card strong {
+  font-size: 27px;
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.blue {
+  background: #eaf1ff;
+  color: var(--blue);
+}
+
+.green {
+  background: #e5f8ef;
+  color: var(--green);
+}
+
+.purple {
+  background: #eeeafd;
+  color: var(--purple);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 22px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.card-header p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.patient-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.patient-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.patient-avatar {
+  width: 42px;
+  height: 42px;
+  background: #e6f3f2;
+  color: var(--primary);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.patient-name {
+  font-weight: 600;
+}
+
+.patient-sub {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.ai-card {
+  background:
+    linear-gradient(145deg, #f1fbfa, #ffffff);
