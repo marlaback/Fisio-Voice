@@ -719,3 +719,1128 @@ h2 {
 .ai-card {
   background:
     linear-gradient(145deg, #f1fbfa, #ffffff);
+border-color: #cce9e6;
+}
+
+.ai-header {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.ai-sparkle {
+  background: #ddf5f2;
+  color: var(--primary);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.ai-example {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 22px 0;
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.search-box {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 11px 14px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.patient-table {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 20px 0 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 12px;
+  outline: none;
+  background: white;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+}
+
+.clinical-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.voice-box {
+  position: relative;
+}
+
+.voice-box textarea {
+  padding-right: 65px;
+}
+
+.voice-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  border: 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 19px;
+}
+
+.voice-btn.recording {
+  background: #dc3545;
+  animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.voice-status {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.ai-button {
+  width: 100%;
+  margin-top: 20px;
+  border: 0;
+  background: #7057d9;
+  color: white;
+  padding: 14px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.ai-button:hover {
+  background: #5942bd;
+}
+
+.ai-result {
+  background: #f8fbfb;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 330px;
+}
+
+.ai-result h3 {
+  font-size: 13px;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.ai-result p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.empty-state {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-state span {
+  font-size: 30px;
+  color: var(--purple);
+}
+
+.evolution-card {
+  max-width: 850px;
+}
+
+.evolution-result {
+  background: #f5f9f8;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 35, 35, .45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+
+  .logo div:not(.logo-icon),
+  .nav-btn:not(.active)::after,
+  .nav-btn span + * {
+    display: none;
+  }
+
+  .logo {
+    padding: 0 5px 30px;
+  }
+
+  .nav-btn {
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .nav-btn span {
+    font-size: 18px;
+  }
+
+  .user {
+    justify-content: center;
+  }
+
+  .user div:not(.avatar) {
+    display: none;
+  }
+
+  .main {
+    margin-left: 70px;
+    padding: 25px;
+  }
+
+  .stats,
+  .dashboard-grid,
+  .clinical-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .main {
+    padding: 18px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+}
+app.js
+let patients =
+  JSON.parse(localStorage.getItem("fisioia_patients")) || [];
+
+let anamneses =
+  JSON.parse(localStorage.getItem("fisioia_anamneses")) || [];
+
+let evolutions =
+  JSON.parse(localStorage.getItem("fisioia_evolutions")) || [];
+
+let aiRecords =
+  JSON.parse(localStorage.getItem("fisioia_ai_records")) || [];
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".nav-btn").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      showPage(button.dataset.page);
+
+    });
+
+  });
+
+  updateDashboard();
+  renderPatients();
+  populatePatientSelects();
+
+});
+
+
+function showPage(page) {
+
+  document.querySelectorAll(".page")
+    .forEach(p => p.classList.remove("active"));
+
+  document.getElementById(page)
+    .classList.add("active");
+
+  document.querySelectorAll(".nav-btn")
+    .forEach(btn => {
+
+      btn.classList.toggle(
+        "active",
+        btn.dataset.page === page
+      );
+
+    });
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+/* =========================
+   PACIENTES
+========================= */
+
+function openPatientModal() {
+
+  document
+    .getElementById("patientModal")
+    .classList.add("open");
+
+}
+
+
+function closePatientModal() {
+
+  document
+    .getElementById("patientModal")
+    .classList.remove("open");
+
+}
+
+
+function createPatient() {
+
+  const name =
+    document.getElementById("newPatientName").value.trim();
+
+  const birth =
+    document.getElementById("newPatientBirth").value;
+
+  const phone =
+    document.getElementById("newPatientPhone").value.trim();
+
+  const complaint =
+    document.getElementById("newPatientComplaint").value.trim();
+
+
+  if (!name) {
+
+    alert("Informe o nome do paciente.");
+
+    return;
+
+  }
+
+
+  const patient = {
+
+    id: Date.now(),
+
+    name,
+
+    birth,
+
+    phone,
+
+    complaint,
+
+    createdAt: new Date().toISOString()
+
+  };
+
+
+  patients.unshift(patient);
+
+  saveData();
+
+  document.getElementById("newPatientName").value = "";
+  document.getElementById("newPatientBirth").value = "";
+  document.getElementById("newPatientPhone").value = "";
+  document.getElementById("newPatientComplaint").value = "";
+
+  closePatientModal();
+
+  updateDashboard();
+  renderPatients();
+  populatePatientSelects();
+
+}
+
+
+function renderPatients() {
+
+  const container =
+    document.getElementById("patientsList");
+
+  const search =
+    document
+      .getElementById("patientSearch")
+      ?.value
+      .toLowerCase() || "";
+
+
+  const filtered =
+    patients.filter(patient =>
+      patient.name.toLowerCase().includes(search)
+    );
+
+
+  if (!filtered.length) {
+
+    container.innerHTML = `
+      <div class="empty-state">
+        <p>Nenhum paciente encontrado.</p>
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    filtered.map(patient => `
+
+      <div class="patient-row">
+
+        <div class="patient-info">
+
+          <div class="patient-avatar">
+            ${getInitials(patient.name)}
+          </div>
+
+          <div>
+
+            <div class="patient-name">
+              ${escapeHTML(patient.name)}
+            </div>
+
+            <div class="patient-sub">
+              ${escapeHTML(patient.complaint || "Sem queixa registrada")}
+            </div>
+
+          </div>
+
+        </div>
+
+        <button
+          class="text-btn"
+          onclick="selectPatient(${patient.id})"
+        >
+          Abrir
+        </button>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+function selectPatient(id) {
+
+  const patient =
+    patients.find(p => p.id === id);
+
+  if (!patient) return;
+
+  document.getElementById("anamnesisPatient").value =
+    patient.id;
+
+  document.getElementById("evolutionPatient").value =
+    patient.id;
+
+  showPage("anamnesis");
+
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+function updateDashboard() {
+
+  document.getElementById("patientCount")
+    .textContent = patients.length;
+
+  document.getElementById("sessionCount")
+    .textContent = evolutions.length;
+
+  document.getElementById("aiCount")
+    .textContent = aiRecords.length;
+
+
+  const recent =
+    document.getElementById("recentPatients");
+
+
+  if (!patients.length) {
+
+    recent.innerHTML = `
+      <div class="empty-state">
+        <p>Cadastre seu primeiro paciente.</p>
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  recent.innerHTML =
+    patients.slice(0, 5).map(patient => `
+
+      <div class="patient-row">
+
+        <div class="patient-info">
+
+          <div class="patient-avatar">
+            ${getInitials(patient.name)}
+          </div>
+
+          <div>
+
+            <div class="patient-name">
+              ${escapeHTML(patient.name)}
+            </div>
+
+            <div class="patient-sub">
+              ${escapeHTML(patient.complaint || "Paciente")}
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* =========================
+   SELECTS
+========================= */
+
+function populatePatientSelects() {
+
+  const selects = [
+    document.getElementById("anamnesisPatient"),
+    document.getElementById("evolutionPatient")
+  ];
+
+
+  selects.forEach(select => {
+
+    const currentValue = select.value;
+
+    select.innerHTML =
+      `<option value="">Selecione o paciente</option>`;
+
+
+    patients.forEach(patient => {
+
+      const option =
+        document.createElement("option");
+
+      option.value = patient.id;
+
+      option.textContent = patient.name;
+
+      select.appendChild(option);
+
+    });
+
+
+    select.value = currentValue;
+
+  });
+
+}
+
+
+/* =========================
+   VOZ
+========================= */
+
+let recognition = null;
+
+
+function startVoiceRecognition() {
+
+  const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+
+  if (!SpeechRecognition) {
+
+    alert(
+      "Seu navegador não suporta reconhecimento de voz. " +
+      "Experimente usar Google Chrome ou Microsoft Edge."
+    );
+
+    return;
+
+  }
+
+
+  if (recognition) {
+
+    recognition.stop();
+
+    return;
+
+  }
+
+
+  recognition =
+    new SpeechRecognition();
+
+  recognition.lang = "pt-BR";
+
+  recognition.continuous = true;
+
+  recognition.interimResults = true;
+
+
+  const button =
+    document.getElementById("voiceButton");
+
+  const status =
+    document.getElementById("voiceStatus");
+
+  const textarea =
+    document.getElementById("voiceText");
+
+
+  recognition.onstart = () => {
+
+    button.classList.add("recording");
+
+    status.textContent =
+      "🔴 Gravando... fale normalmente.";
+
+  };
+
+
+  recognition.onresult = event => {
+
+    let finalText = "";
+
+    for (
+      let i = event.resultIndex;
+      i < event.results.length;
+      i++
+    ) {
+
+      finalText +=
+        event.results[i][0].transcript;
+
+    }
+
+
+    textarea.value +=
+      finalText + " ";
+
+  };
+
+
+  recognition.onerror = () => {
+
+    status.textContent =
+      "Não foi possível reconhecer a fala.";
+
+  };
+
+
+  recognition.onend = () => {
+
+    button.classList.remove("recording");
+
+    status.textContent =
+      "Clique novamente para continuar.";
+
+    recognition = null;
+
+  };
+
+
+  recognition.start();
+
+}
+
+
+/* =========================
+   IA — ANAMNESE
+========================= */
+
+function processWithAI() {
+
+  const patientId =
+    document.getElementById("anamnesisPatient").value;
+
+  const text =
+    document.getElementById("voiceText").value.trim();
+
+
+  if (!patientId) {
+
+    alert("Selecione um paciente.");
+
+    return;
+
+  }
+
+
+  if (!text) {
+
+    alert("Digite ou grave o relato clínico.");
+
+    return;
+
+  }
+
+
+  const patient =
+    patients.find(p => p.id == patientId);
+
+
+  const result = generateClinicalStructure(
+    patient,
+    text
+  );
+
+
+  document.getElementById("aiResult").innerHTML = result;
+
+  document
+    .getElementById("saveAnamnesis")
+    .classList.remove("hidden");
+
+
+  window.currentAnamnesis = {
+
+    patientId: Number(patientId),
+
+    originalText: text,
+
+    result
+
+  };
+
+}
+
+
+function generateClinicalStructure(patient, text) {
+
+  /*
+    DEMONSTRAÇÃO LOCAL.
+
+    Aqui você poderá conectar uma API de IA posteriormente.
+    O texto abaixo organiza automaticamente o relato em
+    campos clínicos básicos.
+  */
+
+
+  const complaint =
+    patient.complaint || "Não informado";
+
+
+  return `
+
+    <h3>Identificação</h3>
+
+    <p>
+      <strong>Paciente:</strong>
+      ${escapeHTML(patient.name)}
+    </p>
+
+
+    <h3>Queixa principal</h3>
+
+    <p>
+      ${escapeHTML(complaint)}
+    </p>
+
+
+    <h3>Relato da anamnese</h3>
+
+    <p>
+      ${escapeHTML(text)}
+    </p>
+
+
+    <h3>Observações clínicas</h3>
+
+    <p>
+      Informações extraídas do relato devem ser
+      revisadas pelo profissional antes do salvamento.
+    </p>
+
+
+    <h3>Plano / próximos passos</h3>
+
+    <p>
+      Avaliar achados clínicos, definir objetivos
+      terapêuticos e registrar conduta conforme
+      avaliação profissional.
+    </p>
+
+  `;
+
+}
+
+
+function saveAnamnesis() {
+
+  if (!window.currentAnamnesis) return;
+
+
+  anamneses.push({
+
+    id: Date.now(),
+
+    ...window.currentAnamnesis,
+
+    createdAt: new Date().toISOString()
+
+  });
+
+
+  aiRecords.push({
+
+    id: Date.now(),
+
+    type: "anamnese",
+
+    createdAt: new Date().toISOString()
+
+  });
+
+
+  saveData();
+
+  alert("Anamnese salva com sucesso.");
+
+  document.getElementById("voiceText").value = "";
+
+  document.getElementById("aiResult").innerHTML = `
+
+    <div class="empty-state">
+
+      <span>✓</span>
+
+      <p>Anamnese salva no prontuário.</p>
+
+    </div>
+
+  `;
+
+  document
+    .getElementById("saveAnamnesis")
+    .classList.add("hidden");
+
+  updateDashboard();
+
+}
+
+
+/* =========================
+   EVOLUÇÃO
+========================= */
+
+function startEvolutionVoice() {
+
+  const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+
+  if (!SpeechRecognition) {
+
+    alert("Seu navegador não suporta reconhecimento de voz.");
+
+    return;
+
+  }
+
+
+  const recognition =
+    new SpeechRecognition();
+
+  recognition.lang = "pt-BR";
+
+  recognition.continuous = false;
+
+  recognition.interimResults = false;
+
+
+  recognition.onstart = () => {
+
+    alert("Fale agora. A gravação será encerrada ao terminar.");
+
+  };
+
+
+  recognition.onresult = event => {
+
+    const text =
+      event.results[0][0].transcript;
+
+    document.getElementById("evolutionText")
+      .value += text + " ";
+
+  };
+
+
+  recognition.start();
+
+}
+
+
+function generateEvolution() {
+
+  const patientId =
+    document.getElementById("evolutionPatient").value;
+
+  const text =
+    document.getElementById("evolutionText")
+      .value.trim();
+
+  const conduct =
+    document.getElementById("conduct")
+      .value.trim();
+
+
+  if (!patientId) {
+
+    alert("Selecione um paciente.");
+
+    return;
+
+  }
+
+
+  if (!text) {
+
+    alert("Informe o relato da sessão.");
+
+    return;
+
+  }
+
+
+  const patient =
+    patients.find(p => p.id == patientId);
+
+
+  const result = `
+
+    <h3>Paciente</h3>
+
+    <p>${escapeHTML(patient.name)}</p>
+
+
+    <h3>Evolução</h3>
+
+    <p>${escapeHTML(text)}</p>
+
+
+    <h3>Conduta realizada</h3>
+
+    <p>
+      ${escapeHTML(conduct || "Não informado")}
+    </p>
+
+
+    <h3>Plano</h3>
+
+    <p>
+      Manter acompanhamento fisioterapêutico e
+      reavaliar resposta clínica na próxima sessão.
+    </p>
+
+  `;
+
+
+  const resultBox =
+    document.getElementById("evolutionResult");
+
+
+  resultBox.innerHTML = result;
+
+  resultBox.classList.remove("hidden");
+
+  document
+    .getElementById("saveEvolution")
+    .classList.remove("hidden");
+
+
+  window.currentEvolution = {
+
+    patientId: Number(patientId),
+
+    originalText: text,
+
+    conduct,
+
+    result
+
+  };
+
+}
+
+
+function saveEvolution() {
+
+  if (!window.currentEvolution) return;
+
+
+  evolutions.push({
+
+    id: Date.now(),
+
+    ...window.currentEvolution,
+
+    createdAt: new Date().toISOString()
+
+  });
+
+
+  aiRecords.push({
+
+    id: Date.now(),
+
+    type: "evolucao",
+
+    createdAt: new Date().toISOString()
+
+  });
+
+
+  saveData();
+
+  alert("Evolução salva com sucesso.");
+
+  document.getElementById("evolutionText").value = "";
+
+  document.getElementById("conduct").value = "";
+
+  document
+    .getElementById("evolutionResult")
+    .classList.add("hidden");
+
+  document
+    .getElementById("saveEvolution")
+    .classList.add("hidden");
+
+  updateDashboard();
+
+}
+
+
+/* =========================
+   STORAGE
+========================= */
+
+function saveData() {
+
+  localStorage.setItem(
+    "fisioia_patients",
+    JSON.stringify(patients)
+  );
+
+  localStorage.setItem(
+    "fisioia_anamneses",
+    JSON.stringify(anamneses)
+  );
+
+  localStorage.setItem(
+    "fisioia_evolutions",
+    JSON.stringify(evolutions)
+  );
+
+  localStorage.setItem(
+    "fisioia_ai_records",
+    JSON.stringify(aiRecords)
