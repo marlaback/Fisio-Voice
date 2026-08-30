@@ -151,3 +151,104 @@
         <div>
           <p class="eyebrow">PRONTUÁRIO</p>
           <h1>Pacientes</h1>
+  <p class="muted">Cadastre e acompanhe seus pacientes.</p>
+        </div>
+
+        <button class="primary-btn" onclick="openPatientModal()">
+          + Novo paciente
+        </button>
+      </header>
+
+      <div class="card">
+
+        <div class="search-box">
+          🔎
+          <input
+            id="patientSearch"
+            type="text"
+            placeholder="Buscar paciente..."
+            oninput="renderPatients()"
+          >
+        </div>
+
+        <div id="patientsList" class="patient-table"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ANAMNESE -->
+
+    <section id="anamnesis" class="page">
+
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">INTELIGÊNCIA ARTIFICIAL</p>
+          <h1>Nova anamnese</h1>
+          <p class="muted">
+            Fale naturalmente e deixe a IA organizar o registro.
+          </p>
+        </div>
+      </header>
+
+
+      <div class="clinical-grid">
+
+        <div class="card">
+
+          <label>Paciente</label>
+
+          <select id="anamnesisPatient">
+            <option value="">Selecione o paciente</option>
+          </select>
+
+
+          <label>Relato clínico</label>
+
+          <div class="voice-box">
+
+            <textarea
+              id="voiceText"
+              placeholder="Digite ou fale o relato do paciente..."
+            ></textarea>
+
+            <button
+              id="voiceButton"
+              class="voice-btn"
+              onclick="startVoiceRecognition()"
+            >
+              🎙️
+            </button>
+
+          </div>
+
+          <div id="voiceStatus" class="voice-status">
+            Clique no microfone para começar.
+          </div>
+
+
+          <button
+            class="ai-button"
+            onclick="processWithAI()"
+          >
+            ✦ Organizar com IA
+          </button>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-header">
+            <div>
+              <h2>Anamnese estruturada</h2>
+              <p>Resultado gerado pela IA</p>
+            </div>
+          </div>
+
+          <div id="aiResult" class="ai-result">
+
+            <div class="empty-state">
+              <span>✦</span>
+              <p>
