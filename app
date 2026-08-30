@@ -1844,3 +1844,34 @@ function saveData() {
   localStorage.setItem(
     "fisioia_ai_records",
     JSON.stringify(aiRecords)
+);
+
+}
+
+
+/* =========================
+   UTILITÁRIOS
+========================= */
+
+function getInitials(name) {
+
+  return name
+    .split(" ")
+    .slice(0, 2)
+    .map(word => word[0])
+    .join("")
+    .toUpperCase();
+
+}
+
+
+function escapeHTML(text) {
+
+  const div =
+    document.createElement("div");
+
+  div.textContent = text || "";
+
+  return div.innerHTML;
+
+}
